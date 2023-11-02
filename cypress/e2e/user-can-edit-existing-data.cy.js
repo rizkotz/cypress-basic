@@ -62,9 +62,9 @@ describe('User Can Edit Data Existing Data', () => {
     .contains('Edit')
     .click();
     cy.get('#name').clear('User ');
-    cy.get('#name').type('M Setya Budi P edited');
+    cy.get('#name').type('Rizqi Fauzan edited');
     cy.get('.btn-primary').contains('Submit').click();
-    cy.get('.table td').contains('M Setya Budi P').should('have.text', 'M Setya Budi P edited');
+    cy.get('.table td').contains('Rizqi Fauzan').should('have.text', 'Rizqi Fauzan edited');
     // assert
     cy.get('.alert')
       .should('be.visible')
